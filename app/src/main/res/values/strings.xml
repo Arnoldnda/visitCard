@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">VisitCard</string>
+    <string name="name">N\'da desir arnold vianney</string>
+    <string name="function">Développeur Android</string>
+    <string name="number">+225 0502182091</string>
+    <string name="social">\@Arnoldnda</string>
+    <string name="email">ndadesirarnold@gmail.com</string>
 </resources>

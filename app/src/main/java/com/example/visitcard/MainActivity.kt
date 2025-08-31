@@ -31,6 +31,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -48,7 +49,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    VisitCard()
                 }
             }
         }
@@ -77,7 +78,6 @@ fun Presentation(fullName: String, function: String, modifier: Modifier = Modifi
             fontSize = 30.sp,
             modifier = Modifier
                 .padding(top = 16.dp, bottom = 8.dp)
-
         )
         Text(
             text = function,
@@ -152,27 +152,19 @@ fun VisitCard() {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                //            .background(
-                //                brush = Brush.verticalGradient(
-                //                    colors = listOf(
-                //                        Color(0xFF90CAF9),
-                //                        Color(0xFFCFD8DC)
-                //                    )
-                //                )
-                //            )
                 .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally
 
         ) {
             Presentation(
-                fullName = "N'da desir arnold vianney",
-                function = "Développeur Android",
+                fullName = stringResource(R.string.name),
+                function = stringResource(R.string.function),
                 modifier = Modifier.weight(2f)
             )
             coordonnees(
-                number = "+225 0502182091",
-                social = "@Arnoldnda",
-                email = "ndadesirarnold@gmail.com",
+                number = stringResource(R.string.number),
+                social = stringResource(R.string.social),
+                email = stringResource(R.string.email),
                 modifier = Modifier.weight(1f)
             )
         }
